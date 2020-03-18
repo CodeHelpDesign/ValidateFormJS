@@ -1,7 +1,7 @@
 # ValidateFormJS
 ValidateForm JS ayuda al desarrollador tener libertad de configurar sus validacion en lo que respecta al ingreso de datos en las cajas de texto con un codigo simple.
 
-## Documentacion
+## Documentación
 
 
 ## Copyright and license
