@@ -4,5 +4,5 @@ ValidateForm JS ayuda al desarrollador tener libertad de configurar sus validaci
 ## Documentacion
 
 
-Copyright and license
+## Copyright and license
 Copyright 2016 CodeHelpDesign under the MIT license.
