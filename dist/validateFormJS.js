@@ -1,7 +1,9 @@
 /*!
  * ValidateFormJS v0.1.1
- * Copyright 2020 ---
- * Licensed under CODE HELP DESIGN github--
+ * Copyright 2020 CodeHelpDesign
+ * Licensed under http://opensource.org/licenses/MIT
+ *
+ * https://github.com/CodeHelpDesign/ValidateFormJS
  */
 var valorFinal=true;
 var styleBool= true;
