@@ -1,0 +1,451 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidateForm JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/paraiso-light.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav dm1 sticky-nav" id="nav-header">
+        <div class="container">
+        <!-- Navbar brand -->
+            <div class="w-75">
+                <a class="navbar-brand order-0" href="#nav"><h1 style="font-size: 1.25rem;">CodeHelpDesign</h1></a>    
+            </div>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse order-1" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto" style="margin-right: 0;">
+                    <li class="nav-item active">
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/CodeHelpDesign/ValidateFormJS"><button class="btn bg-black border-btn">GitHub</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documentacion"><button class="btn bg-nav border-btn">Documentación</button></a>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+    </nav><br>
+    <div class="container">
+        <div class="d-flex align-items-center">
+            <br>
+            <div class="row">
+                <div class="col-md-7 pt-5 pb-5">
+                    <div class="carousel slide shadow carou" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/frm1.JPG">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="img/frm2.JPG">
+                            </div>
+                            <div class="carousel-item">
+                            <img class="d-block w-100" src="img/frm3.JPG">
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-5 d-flex align-items-center">
+                    <div class="card bg-card" style="box-shadow: none;">
+                        <div class="card-header bg-nav text-white font-weight-bold text-center bs">
+                            <h3>ValidateForm Js</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="text-align: right;">
+                                <p class="lead">
+                                    Cree validaciónes en tiempo record, probando las diferentes características que trae ValidateFormJS.   
+                                </p>
+                                <p class="lead">
+                                    Puede establecer longitud en un campo, validar si esta vacio, incluso ¡establecer que tipo de caracteres ingresar!.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><div id="documentacion"></div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+              <div class="list-group sticky" style="top: 10%; z-index: 1;" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-ejemplo-list" data-toggle="list" href="#list-ejemplo" role="tab" aria-controls="ejemplo">Ejemplo</a>
+                <a class="list-group-item list-group-item-action" id="list-uso-list" data-toggle="list" href="#list-uso" role="tab" aria-controls="uso">Uso</a>
+                <a class="list-group-item list-group-item-action" id="list-opcion-list" data-toggle="list" href="#list-opcion" role="tab" aria-controls="opcion">Opciones</a>
+                <a class="list-group-item list-group-item-action" id="list-estru-list" data-toggle="list" href="#list-estru" role="tab" aria-controls="estru">Estructura</a>
+                <a class="list-group-item list-group-item-action" id="list-func-list" data-toggle="list" href="#list-func" role="tab" aria-controls="func">Funciones</a>  
+            </div>
+            </div>
+            <div class="col-9">
+                <div class="bg-nav p-2 text-white font-weight-bold"><p style="margin: 0; letter-spacing: .3rem;font-size: 1.2rem">Documentación</p></div>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-ejemplo" role="tabpanel" aria-labelledby="list-ejemplo-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Ingresar Datos</h4>
+                            <form id="frmUno">
+                                <div class="form-group">
+                                <label for="usuario">Usuario Correcto</label>
+                                <input type="text" class="form-control" id="usuarioC" placeholder="Ingrese el Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="usuario">Usuario Error</label>
+                                    <input type="text" class="form-control" id="usuarioE" placeholder="Ingrese el Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasena">Contraseña</label>
+                                    <input type="password" class="form-control" id="contrasena" placeholder="Ingrese la contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasenaRep">Repita la Contraseña</label>
+                                    <input type="password" class="form-control" id="contrasenaRep" placeholder="Ingrese la contraseña">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                  <a class="nav-item nav-link active color" id="nav-html-tab" data-toggle="tab" href="#nav-html" role="tab" aria-controls="nav-html" aria-selected="true">Html</a>
+                                  <a class="nav-item nav-link color" id="nav-js-tab" data-toggle="tab" href="#nav-js" role="tab" aria-controls="nav-js" aria-selected="false">JS</a>
+                                </div>
+                              </nav>
+                              <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-html" role="tabpanel" aria-labelledby="nav-html-tab">
+                                    <pre><code class="html">
+&lt;h4&gt;Ingresar Datos&lt;/h4&gt;
+&lt;form id="frmUno"&gt;
+    &lt;div class="form-group"&gt;
+    &lt;label for="usuario">Usuario Correcto&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="usuarioC" placeholder="Ingrese el Usuario"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="usuario"&gt;Usuario Error&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="usuarioE" placeholder="Ingrese el Usuario"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="contrasena"&gt;Contraseña&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="contrasena" placeholder="Ingrese la contraseña"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="contrasenaRep"&gt;Repita la Contraseña&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="contrasenaRep" placeholder="Ingrese la contraseña"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                                    </code></pre>
+                                </div>
+                                <div class="tab-pane fade" id="nav-js" role="tabpanel" aria-labelledby="nav-js-tab">
+                                    <pre><code class="javascript">
+const vf = new ValidateForm("frmUno",[
+{
+    tipo: "texto",
+    campo: "usuarioC",
+    vacio:true
+},
+{
+    tipo: "texto",
+    campo: "usuarioE",
+    vacio:true
+},
+{
+    tipo: "texto",
+    campo: "contrasena",
+    vacio: true,
+},
+{
+    tipo: "texto",
+    campo: "contrasenaRep",
+    vacio: true,
+    comparar:{
+        campoDos:"contrasena"
+    }
+}
+]);
+vf.ValidarIniciar();
+document.getElementById("frmUno").addEventListener("submit",function(){
+if(vf.GetResultado()){
+    alert("enviando");
+}else{
+    alert("error");
+}
+});
+                                    </code></pre>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-uso" role="tabpanel" aria-labelledby="list-uso-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Antes comenzar a usar las validaciones, es necesario usar el atributo <b>id</b> en las cajas de texto y en el Formulario (el nombre que le establezcas puede ser a su elección).</p>
+                            <pre><code class="html">
+&lt;form id="frm"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="campo">Campo&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="campo" placeholder="Ingrese el Campo"&gt;
+    &lt;/div&gt;
+
+    ...
+
+&lt;/form&gt;
+                            </code></pre>
+                            <p>Para iniciar las Validaciones deberá </p>
+                            <pre><code class="javascript">
+const vf = new ValidateForm("frm",[
+   ...
+]);
+vf.ValidarIniciar();
+                            </code></pre>
+                            <p>Cuando las validaciones son correctas, el usuario puede manejar el evento que desea realizar, solo con la funcion  <b>GetResultado()</b>. Ejemplo: </p>
+                            <pre><code class="javascript">
+document.getElementById("frmUno").addEventListener("submit",function(){
+    if(vf.GetResultado()){
+        ...Evento Correcto
+    }else{
+        ..Evento Incorrecto
+    }
+});
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-opcion" role="tabpanel" aria-labelledby="list-opcion-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="10">Nombre</th>
+                                        <th width="10">Tipo</th>
+                                        <th width="15">Valor(es)</th>
+                                        <th width="60">Descripción</th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>tipo</td>
+                                        <td>string</td>
+                                        <td>[texto,textoEspecial,
+                                            seleccion,correo]</td>
+                                        <td>Tipo de validacion que se realizara, enfocado a la manera de como debe ingresarse el dato.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>campo</td>
+                                        <td>string</td>
+                                        <td>...</td>
+                                        <td>Identificador de los campos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>vacio</td>
+                                        <td>boolean</td>
+                                        <td>[true,false]</td>
+                                        <td>Establezca si el campo sera vacio o no.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>longitud</td>
+                                        <td>objeto</td>
+                                        <td>{}</td>
+                                        <td>
+                                            <p>Establezca si el campo tendra una longitud de caracteres.</p>   
+                                            <p>Puede especificar el maxima de caracteres y el minimo de caracteres.</p>
+                                            <pre><code class="javascript">
+longitud : {
+    max:30,
+    min:2
+}
+                                            </code></pre>
+                                            <p>Especifique si necesita que la longitud sea exacta. (El valor de <b>min debe ser 0</b>).</p>
+                                            <pre><code class="javascript">
+longitud : {
+    max:30,
+    min:0,
+    exacto: true
+}
+                                            </code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>comparar</td>
+                                        <td>objeto</td>
+                                        <td>{}</td>
+                                        <td>
+                                           <p>Permite ingresar otro campo para realizar una comparación, el texto debe establecerse en <b>campoDos</b>.</p>
+                                           <pre><code class="javascript">
+comparar:{
+    campoDos: "contrasena"
+}
+                                           </code></pre>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>especial</td>
+                                        <td>objeto</td>
+                                        <td>{}</td>
+                                        <td>
+                                            <p>Para usar esta opción es necesario que se establesca <b>tipo:"textoEspecial"</b>.</p>
+                                            <p>Las opciones a ingresar son las siguientes:</p>
+                                            <p>Para que en el campo solo se puede ingresar <b>números</b>.</p>
+                                            <pre><code class="javascript">
+especial:{
+    tipoEspecial:"numero"
+}   
+                                            </code></pre>
+                                            <p>Para que en el campo solo se puede ingresar <b>letras</b>.</p>
+                                            <pre><code class="javascript">
+especial:{
+    tipoEspecial:"letra"
+}   
+                                            </code></pre>
+                                            <p>Para que en el campo solo se puede ingresar <b>letras</b>.</p>
+                                            <pre><code class="javascript">
+especial:{
+    tipoEspecial:"letraNumero"
+}   
+                                            </code></pre>
+                                            <p>Para que en el campo solo se puede ingresar <b>numero decimal</b>.</p>
+                                            <pre><code class="javascript">
+especial:{
+    tipoEspecial:"decimal"
+}   
+                                            </code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-estru" role="tabpanel" aria-labelledby="list-estru-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Estructura par iniciar la validación.</p>
+                            <pre><code class="javascript">
+[variable] = new ValidateForm([identificador del Formulario(string)],[
+    array(uso de las ociones, en objetos)
+    ]);
+[variable].ValidarIniciar();
+                            </code></pre>
+                            <br>
+                            <p>La estructura puede varias depende de el uso de las opciones, como se muestra a continuación.</p>
+                            <pre><code class="javascript">
+{
+    tipo: "texto",
+    campo: "usuario",
+    vacio: true,
+    longitud:{
+        max: 30,
+        min: 6
+    }
+},{
+    tipo:"texto",
+    campo:"contrasena",
+    vacio:true,
+    longitud:{
+        max:30,
+        min:2
+    },
+},
+{
+    tipo: "texto",
+    campo:"contrasenaRep",
+    vacio: true,
+    longitud:{
+        max:30,
+        min:2
+    },
+    comparar:{
+        campoDos: "contrasena"
+    }
+},
+{
+    tipo:"textoEspecial",
+    campo:"soloNumero",
+    vacio:true,
+    especial:{
+        tipoEspecial:"numero"
+    },
+    longitud:{
+        max:4,
+        min:0,
+        exacto: true
+    }
+},{
+    tipo: "seleccion",
+    campo: "tipoUsuario",
+    vacio:true
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-func" role="tabpanel" aria-labelledby="list-func-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th><b>Constructor/Funcion</b></th>
+                                        <th><b>Return</b></th>
+                                        <th><b>Descripcion</b></th>                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ValidateForm()</td>
+                                        <td>...</td>
+                                        <td><p>Crea una nueva instancia de la clase ValidateForm, recibe como primer parametro el <b>id</b> del formulario,
+                                        y como segundo parametro una estructura de validación.</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ValidarIniciar()</td>
+                                        <td>...</td>
+                                        <td><p>Inicializa las Validacion con el uso de los eventos de javascript (input,change).</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GetResultado()</td>
+                                        <td>[true,false]</td>
+                                        <td><p>Obtiene el resultado de las validaciones, es obligatorio si el usuario quiere enviar un formulario.</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+            
+            </div>
+        </div>
+    </div>
+    <br>    
+
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="js/validateFormJS.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
