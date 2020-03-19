@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Ingresar Datos</h4>
+                <form id="frmUno">
+                    <div class="form-group">
+                      <label for="usuario">Usuario Correcto</label>
+                      <input type="text" class="form-control" id="usuarioC" placeholder="Ingrese el Usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">Usuario Error</label>
+                        <input type="text" class="form-control" id="usuarioE" placeholder="Ingrese el Usuario">
+                      </div>
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena" placeholder="Ingrese la contraseña">
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasenaRep">Repita la Contraseña</label>
+                        <input type="password" class="form-control" id="contrasenaRep" placeholder="Ingrese la contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Ingresar Datos</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="numero">Solo numero</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Ingrese la contraseña">
+                    </div>
+                    <div class="form-group">
+                        <label for="letra">Solo letra</label>
+                        <input type="text" class="form-control" id="letra" placeholder="Ingrese la contraseña">
+                    </div>
+                    <div class="form-group">
+                        <label for="decimal">Solo Decimal</label>
+                        <input type="text" class="form-control" id="decimal" placeholder="Ingrese la contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+<br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Ingresar Datos</h4>
+                <form id="">
+                    <div class="form-group">
+                      <label for="longitud">Longitud</label>
+                      <input type="text" class="form-control" id="longitud" placeholder="Ingrese el Usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="text" class="form-control" id="correo" placeholder="Ingrese el Usuario">
+                      </div>
+                    <div class="form-group">
+                        <label for="select">Select</label>
+                        <select name="select" id="select" class="form-control">
+                            <option value="">Escoger Valor</option>
+                            <option value="valorUno">Valor Uno</option>
+                            <option value="valorDos">Valor Dos</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h4>Ingresar Datos</h4>
+                <form>
+
+                </form>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <script src="../dist/validateFormJS.js"></script>
+    <script>
+        const vf = new ValidateForm("frmUno",[
+            {
+                tipo: "texto",
+                campo: "usuarioC",
+                vacio:true
+            },
+            {
+                tipo: "texto",
+                campo: "usuarioE",
+                vacio:true
+            },
+            {
+                tipo: "texto",
+                campo: "contrasena",
+                vacio: true,
+            },
+            {
+                tipo: "texto",
+                campo: "contrasenaRep",
+                vacio: true,
+                comparar:{
+                    campoDos:"contrasena"
+                }
+            }
+        ]);
+        vf.ValidarIniciar();
+        
+        document.getElementById("frmUno").addEventListener("submit",function(){
+            if(vf.GetResultado()){
+                alert("enviando");
+            }else{
+                alert("error");
+            }
+        });
+/*
+        const vf2 = new ValidateForm("",[
+            {
+                tipo: "textoEspecial",
+                campo: "numero",
+                vacio:true,
+                especial:{
+                    tipoEspecial:"numero"
+                }
+            },
+            {
+                tipo: "textoEspecial",
+                campo: "letra",
+                vacio:true,
+                especial:{
+                    tipoEspecial:"letra"
+                }
+            },
+            {
+                tipo: "textoEspecial",
+                campo: "decimal",
+                vacio:true,
+                especial:{
+                    tipoEspecial:"decimal"
+                }
+            }
+        ]);
+        vf2.ValidarIniciar();
+
+        const vf3 = new ValidateForm("",[
+            {
+                tipo: "texto",
+                campo: "longitud",
+                vacio:true,
+                longitud:{
+                    max:5,
+                    min:2
+                }
+            },
+            {
+                tipo: "correo",
+                campo: "correo",
+                vacio:true,
+            },
+            {
+                tipo: "seleccion",
+                campo: "select",
+                vacio:true,
+            }
+        ]);
+        vf3.ValidarIniciar();*/
+    </script>
+</body>
+</html>
